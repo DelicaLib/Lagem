@@ -1,0 +1,164 @@
+// main: ../style.less
+
+.container1 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    &-gradient {
+        background-image: linear-gradient(@blue, fade(@blue, 0%), fade(@blue, 0%));
+        width: 100%;
+        height: 100%;
+        // background-image: url("../../images/fog.png");
+        background-size: cover;
+        position: absolute;
+    }
+
+    &-main {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-down {
+            position: relative;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+
+            &1 {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+            &2 {
+                width: 100%;
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        &-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 50px;
+            position: relative;
+            top: 0;
+            left: 0;
+            &1 {
+                position: absolute;
+                height: 80px;
+                width: 150px;
+                background-color: @black;
+                border-radius: 30px 0 0 30px;
+                left: -100%;
+                transition: 1s ease;
+            }
+            &2 {
+                position: absolute;
+                height: 80px;
+                width: 150px;
+                background-color: @black;
+                border-radius: 0 30px 30px 0;
+                right: -100%;
+                transition: 1s ease;
+            }
+            &-text {
+                position: absolute;
+                color: @h1Color;
+                font-size: 25px;
+                transition: 1s ease 1s;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.card {
+    width: 45vw;
+    height: 35vh;
+    min-height: auto;
+    background-image: url("../../images/Card.png");
+    background-size: cover;
+    background-position: 0 -50px;
+    border-radius: 1.5vw;
+    border: 6px solid @black;
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: 1s ease 1s;
+    &.first {
+        margin-left: -50vw;
+    }
+
+    &.second {
+        margin-right: -50vw;
+    }
+
+    &-chip {
+        margin-right: 10px;
+        & img {
+            height: 4.5vw;
+        }
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        max-width: 30vw;
+
+        &-line {
+            display: flex;
+            max-width: 30vw;
+        }
+
+        & h2 {
+            cursor: default;
+            font-size: 5.5vw;
+            color: @h1Color;
+            font-family: 'Fredoka One', cursive;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            line-height: 80%;
+            margin-bottom: 15px;
+        }
+
+        &-name {
+            color: @textOnBlack;
+            font-size: 2vw;
+        }
+
+        &-job {
+            color: @textOnBlack;
+            font-size: 2vw;
+        }
+    }
+}
+
+.photo {
+    width: 10vw;
+    height: 90%;
+    max-height: 18vw;
+    display: flex;
+    & img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        border-radius: 1.5vw;
+    }
+}

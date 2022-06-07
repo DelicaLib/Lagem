@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lagem - виртуальный помощник врача</title>
+    <link rel="shorcut icon" href="icons/icon.jpg" sizes="16x16">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <script src="libs/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <img src="icons/up-arrow.png" class="up" alt="">
+    <img src="icons/up-circle.png" class="up-circle" alt="">
+    <div class="menu-icon" onclick="menuOpenClose()">
+        <img src="icons/menu.png" class="menu-icon-up" alt="">
+        <img src="icons/menu.png" class="menu-icon-centre" alt="">
+        <img src="icons/menu.png" class="menu-icon-down" alt="">
+        <img src="icons/up-circle.png" class="menu-icon-circle" alt="">
+    </div>
+    <header class="header">
+        <div class="header-img">
+            <h1>Lagem</h1>
+            <span>Виртуальный ассистент врача</span>
+        </div>
+
+
+        <div class="header-bottom">
+            <div class="header-bottom-left"></div>
+            <div class="header-bottom-circle" onclick="scrollNext(1);">
+                <img src="icons/down.png">
+            </div>
+            <div class="header-bottom-right"></div>
+        </div>
+    </header>
+
+    <section class="container1">
+        <div class="container1-gradient"></div>
+        <div class="container1-main">
+            <div class="container1-main-up">
+                <div class="container1-main-up1">
+                </div>
+                <div class="container1-main-up2">
+                </div>
+                <div class="container1-main-up-text">
+                    <h2>Наша команда</h2>
+                </div>
+            </div>
+            <div class="container1-main-down">
+                <div class="container1-main-down1">
+                    <div class="card first" id="card1">
+                        <div class="card-info">
+                            <div>
+                                <h2>Lagem</h2>
+                            </div>
+                            <div class="card-info-line">
+                                <div class="card-chip">
+                                    <img src="images/chip.png">
+                                </div>
+                                <div class="card-info-name">
+                                    <p>Имя: Никонов Данила</p>
+                                </div>
+                            </div>
+                            <div class="card-info-job">
+                                <p>Должность: Веб-разработчик</p>
+                            </div>
+                        </div>
+                        <div class="photo">
+                            <img src="images/nikonov.jpg">
+                        </div>
+
+                    </div>
+
+                    <div class="card second" id="card2">
+                        <div class="card-info">
+                            <div>
+                                <h2>Lagem</h2>
+                            </div>
+                            <div class="card-info-line">
+                                <div class="card-chip">
+                                    <img src="images/chip.png">
+                                </div>
+                                <div class="card-info-name">
+                                    <p>Имя: Киенко Александр</p>
+                                </div>
+                            </div>
+                            <div class="card-info-job">
+                                <p>Должность: Специалист по ИИ</p>
+                            </div>
+                        </div>
+                        <div class="photo">
+                            <img src="images/kienko.jpg">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container1-main-down2">
+                    <div class="card first" id="card3">
+                        <div class="card-info">
+                            <div>
+                                <h2>Lagem</h2>
+                            </div>
+                            <div class="card-info-line">
+                                <div class="card-chip">
+                                    <img src="images/chip.png">
+                                </div>
+                                <div class="card-info-name">
+                                    <p>Имя: Дементьев Дмитрий</p>
+                                </div>
+                            </div>
+                            <div class="card-info-job">
+                                <p>Должность: Дизайнер</p>
+                            </div>
+                        </div>
+                        <div class="photo">
+                            <img src="images/demintiev.jpg">
+                        </div>
+
+                    </div>
+
+                    <div class="card second" id="card4">
+                        <div class="card-info">
+                            <div>
+                                <h2>Lagem</h2>
+                            </div>
+                            <div class="card-info-line">
+                                <div class="card-chip">
+                                    <img src="images/chip.png">
+                                </div>
+                                <div class="card-info-name">
+                                    <p>Имя: Назарова Ирина</p>
+                                </div>
+                            </div>
+                            <div class="card-info-job">
+                                <p>Должность: Главный менеджер</p>
+                            </div>
+                        </div>
+                        <div class="photo">
+                            <img src="images/nazarova.jpg">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container2">
+        <div class="about">
+            <div class="about-text">
+                <h2>О нас</h2>
+            </div>
+        </div>
+        <div class="container2-main">
+            <div class="target big">
+                <div class="target-header">
+                    <div class="target-header-text">
+                        <h3>Описание</h3>
+                    </div>
+                    <div class="target-header-img">
+                        <img src="images/description.png">
+                    </div>
+                </div>
+                <div class="target-text">
+                    <p>На данный момент, медицина является одним из крупнейших рынков для технологических компаний, однако это касается в основном оборудования. Поэтому наш проект Lagem представляет собой новое решение этой проблемы. Применение современных
+                        систем, основанных на работе ИИ позволит преобразовать систему диагностики, сделав ее более точной, повысит качество оказываемых медицинских услуг в целом, позволит постоянно отслеживать состояние пациентов, корректировать методы
+                        их лечения, а также поможет в обучении молодым врачам.</p>
+                </div>
+            </div>
+            <div class="target">
+                <div class="target-header">
+                    <div class="target-header-text">
+                        <h3>Цель проекта</h3>
+                    </div>
+                    <div class="target-header-img">
+                        <img src="images/target.png">
+                    </div>
+                </div>
+                <div class="target-text">
+                    <p>Основной целью является оптимизация работы медицинских учреждений путем интеграции более быстрого и точного в работе искусственного интеллекта при осмотре пациентов, благодаря чему можно сократить количество ошибок при постановке диагноза
+                        и вести подробную историю болезни, а также повысить квалификацию медицинского персонала</p>
+                </div>
+            </div>
+            <div class="target big">
+                <div class="target-header">
+                    <div class="target-header-text">
+                        <h3>Актуальность проекта</h3>
+                    </div>
+                    <div class="target-header-img">
+                        <img src="images/relevance.png">
+                    </div>
+                </div>
+                <div class="target-text">
+                    <p>Актуальность нашего проекта заключается в важности развития медицины, как одной из отраслей, непосредственно влияющих на качество жизни человека, в том числе, с применением технологий искусственного интеллекта. В медицине ценится отменная
+                        память ИИ и его способность обрабатывать большое количество данных, сопоставлять и анализировать информацию. Эти возможности позволят нам облегчить работу медицинских сотрудников, сделать процесс обследования пациентов быстрее
+                        и эффективнее, а также снизить риски и повысить продуктивность обучения будущих врачей.</p>
+                </div>
+            </div>
+            <div class="target big last">
+                <div class="target-header">
+                    <div class="target-header-text">
+                        <h3>Задачи проекта</h3>
+                    </div>
+                    <div class="target-header-img">
+                        <img src="images/tasks.png">
+                    </div>
+                </div>
+                <div class="target-text tasks">
+                    <p>Подключить и настроить работу системы распознавания речи "в облаке"</p>
+                    <p>Настроить работу ИИ, который будет переводить распознанную речь в текст и вносить данные в цифровую карту пациента</p>
+                    <p>Создать и настроить работу системы по поиску методов лечения на основе симптоматики пациента</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-img">
+
+        </div>
+    </footer>
+
+    <menu class="menu" id="menu">
+        <div class="separator">
+        </div>
+        <button class="menu-button" onclick="scrollNext(0)">
+            <span>Главная</span>
+        </button>
+        <div class="separator">
+        </div>
+        <button class="menu-button" onclick="scrollNext(1)">
+            <span>Наша команда</span>
+        </button>
+        <div class="separator">
+        </div>
+        <button class="menu-button" onclick="scrollNext(2)">
+            <span>О нас</span>
+        </button>
+        <div class="separator">
+        </div>
+        <button class="menu-button" onclick="scrollNext(4)">
+            <span>Поддержать</span>
+        </button>
+        <div class="separator">
+        </div>
+    </menu>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script src="libs/p5.min.js"></script>
+    <script src="libs/vanta.topology.min.js"></script>
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
