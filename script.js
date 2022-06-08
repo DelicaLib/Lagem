@@ -131,7 +131,12 @@ window.addEventListener("scroll", function scrollEvent() {
             $(".card").css("transition", `1s ease 1s`)
         }
     } else if (window.pageYOffset > windowHeight && container1IsLoad) {
-        if (window.pageYOffset <= windowHeight * 1.2 || Math.round(window.pageYOffset) >= windowHeight * 2) {
+        if (Math.round(window.pageYOffset) >= windowHeight * 2.5) {
+            $(".container1-main-down").css("display", "none")
+            $(".container1-main-up").css("display", "none")
+        } else if (window.pageYOffset <= windowHeight * 1.2 || Math.round(window.pageYOffset) >= windowHeight * 2) {
+            $(".container1-main-up").css("display", "flex")
+            $(".container1-main-down").css("display", "block")
             $(".container1-main-down").css("position", "fixed")
             $(".container1-main-down").css("padding", "10px")
             $(".container1-main-up").css("position", "fixed")

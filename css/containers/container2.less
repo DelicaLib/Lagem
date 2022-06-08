@@ -10,6 +10,15 @@
         flex-direction: column;
         align-items: center;
     }
+    &-gradient {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-image: linear-gradient(fade(@blue, 0%), fade(@blue, 0%), fade(@blue, 0), fade(@blue, 0), @blue);
+        z-index: -1;
+    }
 
 }
 
